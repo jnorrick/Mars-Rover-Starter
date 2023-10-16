@@ -6,4 +6,21 @@ const Command = require('../command.js');
 
 describe("Message class", function() {
 
+    it("throws error if a name is NOT passed into the constructor as the first parameter", function() {
+    expect( function() { new Message();}).toThrow(new Error("Name Required."));
+    });
+    
+// new Command object when passed argument will set 'commandType' 
+    it("constructor sets name", function() {
+    let testObject = new Message("test string", 0)
+    expect(testObject.name).toBe("test string");
+    })
+
+
+    it("contains a commands array passed into the constructor as the 2nd argument", function() {
+    let commandArray = []
+    let newTestObject = new Message("test string", commandArray)
+    expect(newTestObject.commands).toBe(commandArray)
+    })
 });
+
