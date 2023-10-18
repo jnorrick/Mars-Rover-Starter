@@ -10,17 +10,17 @@ describe("Message class", function() {
     expect( function() { new Message();}).toThrow(new Error("Name Required."));
     });
     
-// new Command object when passed argument will set 'commandType' 
+
     it("constructor sets name", function() {
     let testObject = new Message("test string", 0)
     expect(testObject.name).toBe("test string");
-    })
+    });
 
 
     it("contains a commands array passed into the constructor as the 2nd argument", function() {
-    let commandArray = []
-    let newTestObject = new Message("test string", commandArray)
-    expect(newTestObject.commands).toBe(commandArray)
+    let newTestObject = new Message("test string", [])
+    expect(newTestObject.commands).toBeInstanceOf(Array)
+    expect(newTestObject.commands).toHaveLength(1)
     })
 });
 

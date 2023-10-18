@@ -1,10 +1,10 @@
 class Message {
    constructor(name, commands) {
-      this.name = name
+      this.name = name;
       if (!name) {
          throw Error("Name Required.");
          }
-      this.commands = commands
+      this.commands = commands;
    }
 }
 

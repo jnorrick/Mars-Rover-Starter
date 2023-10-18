@@ -5,7 +5,10 @@ class Rover {
       this.generatorWatts = 110;
    }
    //returns an object with at least 2 properties = original Message and array of results
-   // receiveMessage(message)
+   receiveMessage(message) {
+      message = this.name
+      results = this.commandType
+   }
 
    //  message is a Message object
    //  Returns an object containing at least two properties:
