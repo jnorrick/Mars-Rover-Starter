@@ -6,8 +6,10 @@ class Rover {
    }
    //returns an object with at least 2 properties = original Message and array of results
    receiveMessage(message) {
-      message = this.name
-      results = this.commandType
+      let message = message.name
+      let results = []
+      let response = {message, results} //contains original message, and an array of results objects.
+      // let results = this.commandType
    }
 
    //  message is a Message object

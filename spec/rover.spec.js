@@ -15,5 +15,8 @@ describe("Rover class", function() {
     expect(testObject.generatorWatts).toBe(110);
     })
 
-    
+  it("response returned by receiveMessage contains the name of the message", function() {
+    let messageObject = new Rover("Message Name");
+    expect(messageObject.message).toBe("Message Name")
+  })
 });
