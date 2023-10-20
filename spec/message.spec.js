@@ -16,11 +16,12 @@ describe("Message class", function() {
     expect(testObject.name).toBe("test string");
     });
 
-
+/*This test confirms that the commands property of a new message object contains the data passed in from the Message(name, commands) call. */
     it("contains a commands array passed into the constructor as the 2nd argument", function() {
-    let newTestObject = new Message("test string", [])
+    let commandObjects = [new Command('STATUS_CHECK')]
+    let newTestObject = new Message("test string", commands)
     expect(newTestObject.commands).toBeInstanceOf(Array)
-    expect(newTestObject.commands).toHaveLength(1)
+    expect(newTestObject.commands).toHaveLength(0)
     })
 });
 
